@@ -9,6 +9,8 @@
 - ejecucion del programa : terminal o linea de comandos
 - SO : Windows 10 o macOS 
 - codigo fuente y sus Archivos y carpetas principales: 
+
+
   ├──cmd/
     |  ├──client/
     |  |  ├──myclient.go
