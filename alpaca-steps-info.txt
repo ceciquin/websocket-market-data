@@ -1,0 +1,30 @@
+My first approach to resolve this challenge was to find a trading API and make a websocket connection, in this strategy I've found ALpaca API
+
+https://alpaca.markets/docs/api-references/broker-api/trading/positions/
+
+
+API for real time data :
+https://alpaca.markets/docs/api-references/market-data-api/stock-pricing-data/realtime/
+
+** Works while the market is open 
+
+How to authenticate:
+
+1. We need to authenticate to the web socket:
+A. Use NPM package (utility)>> we need node js >> wscat package
+B. wscat -c wss://stream.data.alpaca.markets/v2/iex
+
+communication
+
+1. two separate phases: establishment and receiving data.
+
+
+Form
+2. [{"T": "{message_type}", {contents}},...]
+
+Json payload
+3. {"action": "auth", "key": "PKH0BU9H33KB5UBSGT7V", "secret": "Wm0uLzcyXghTzodGXLBqjSfP3cC5ochncJOuoE7K"}
+
+After authentication succeded, indicate actions to made (subscribe to trades, quotes and bars of a particular symbol)
+4. {"action":"subscribe","trades":["AAPL"],"quotes":["AMD","CLDR"],"bars":["AAPL","VOO"]}
+4. {"action":"subscribe","trades":["SPY"]} (check trade schema to see which information from that do I need)
