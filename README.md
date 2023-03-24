@@ -11,6 +11,7 @@
 - codigo fuente y sus Archivos y carpetas principales: 
 
 
+```
   ├──cmd/
     |  ├──client/
     |  |  ├──myclient.go
@@ -25,6 +26,8 @@
     |  |  ├──server.go
   ├──test/
        └──myclient_test.go
+
+```
        
 - Descripcion del projecto : “websocket-market-data” es un programa diseñado para transmitir datos de mercados en una conxion dual entre el cliente y el servidor utilizando la conexion websocket. Esto nos va a permitir tener una bidereccionalidad de la data. 
 
